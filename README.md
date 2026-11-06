@@ -1,2 +1,7 @@
-# lora-face-restoration
-Efficient personalized blind face restoration through LoRA adaptation of a pretrained diffusion model. Includes code, experiments, and a research report comparing restoration quality, fine-tuning time, GPU memory, and adapter storage. Based on Gen2Res.
+﻿# Efficient Facial Image Restoration Using LoRA-Based Fine-Tuning
+
+Sam Kang | Washington University in St. Louis
+
+LoRA-based personalization of Gen2Res for efficient blind face restoration.
+
+[Read the full report](report.pdf)
