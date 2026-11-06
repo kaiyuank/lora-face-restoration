@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data and generated experiment artifacts are maintained separately.
+# Keep selected presentation figures outside these directories (for example assets/).
+/data/
+/datasets/
+/checkpoints/
+/outputs/
+/runs/
+/logs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy

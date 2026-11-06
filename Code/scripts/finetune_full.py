@@ -1,20 +1,3 @@
-"""
-*******************************************************************************
-Copyright 2024 Adobe
-All Rights Reserved.
-NOTICE: All information contained herein is, and remains
-the property of Adobe and its suppliers, if any. The intellectual
-and technical concepts contained herein are proprietary to Adobe
-and its suppliers and are protected by all applicable intellectual
-property laws, including trade secret and copyright laws.
-Dissemination of this information or reproduction of this material
-is strictly forbidden unless prior written permission is obtained
-from Adobe.
-*******************************************************************************
-
-Train a diffusion model on images.
-"""
-
 import argparse
 import os
 import sys
@@ -40,7 +23,7 @@ def main():
   logger.log("creating model and diffusion...")
   model, diffusion = create_model_and_diffusion(
       **args_to_dict(args,
-                     model_and_diffusion_defaults().keys()), use_lora=args.use_lora, lora_scale_att=args.lora_scale_att, lora_scale_conv=args.lora_scale_conv)
+                     model_and_diffusion_defaults().keys()))
   model.to(dist_util.dev())
   schedule_sampler = create_named_schedule_sampler(args.schedule_sampler,
                                                    diffusion)
@@ -100,9 +83,6 @@ def create_argparser():
       img_path="",
       noise_steps=100,
       personal=True,
-      use_lora=False,
-      lora_scale_att=1.0,
-      lora_scale_conv=2.0,
   )
   defaults.update(model_and_diffusion_defaults())
   parser = argparse.ArgumentParser()
