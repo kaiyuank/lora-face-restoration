@@ -1,7 +1,21 @@
 ﻿# Efficient Facial Image Restoration Using LoRA-Based Fine-Tuning
 
-Sam Kang | Washington University in St. Louis
+Sam Kang | Washington University in St. Louis  
+Advisor: Professor Ulugbek Kamilov
 
-LoRA-based personalization of Gen2Res for efficient blind face restoration.
+[Read the research report](report.pdf)
 
-[Read the full report](report.pdf)
+Implemented LoRA personalization of the Gen2Res diffusion U-Net and
+compared dataset sizes, scaling, and attention, residual, and
+timestep-embedding adaptation using PSNR, SSIM, and LPIPS.
+
+In the reported configuration, attention-only LoRA reduced fine-tuning
+time by 46% and GPU memory usage by 47%, with comparable perceptual
+quality. Per-identity storage decreased from 527 MB full checkpoints
+to 200 KB adapters, used with the shared base model.
+
+This repository archives research code and presentation materials.
+Datasets and model checkpoints are maintained separately. Scripts may
+require environment and path adjustments.
+
+Based on [Gen2Res](https://github.com/adobe-research/gen2res).
